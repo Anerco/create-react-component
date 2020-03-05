@@ -1,20 +1,10 @@
-'use strict';
-// @flow
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import "./{ComponentName}.css"
 
-const {componentName} = props => (
-  <div className="{componentName}-wrapper">
-    Test content
+const {ComponentName} = props => (
+  <div className="{lowercaseComponentName}-wrapper">
+    Content
   </div>
 );
 
-{componentName}.PropTypes = {
-
-}
-
-{componentName}.defaultProps = {
-
-} 
-
-export default {componentName};
+export default {ComponentName};

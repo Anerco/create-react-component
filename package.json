@@ -13,38 +13,20 @@
     "Snippets"
   ],
   "activationEvents": [
-    "onCommand:extension.createReactClassComponent",
-    "onCommand:extension.createReactFunctionalComponent",
-    "onCommand:extension.createReactPureComponent"
+    "onCommand:extension.createReactFunctionalComponent"
   ],
   "main": "./extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "extension.createReactClassComponent",
-        "title": "Create Class Component"
-      },
-      {
         "command": "extension.createReactFunctionalComponent",
         "title": "Create Functional Component"
-      },
-      {
-        "command": "extension.createReactPureComponent",
-        "title": "Create Pure Component"
       }
     ],
     "menus": {
       "explorer/context": [
         {
-          "command": "extension.createReactClassComponent",
-          "group": "navigation"
-        },
-        {
           "command": "extension.createReactFunctionalComponent",
-          "group": "navigation"
-        },
-        {
-          "command": "extension.createReactPureComponent",
           "group": "navigation"
         }
       ]
@@ -55,16 +37,16 @@
     "test": "node ./node_modules/vscode/bin/test"
   },
   "devDependencies": {
-    "@types/mocha": "^2.2.42",
-    "@types/node": "^8.10.25",
-    "eslint": "^4.11.0",
-    "typescript": "^3.1.4",
-    "vscode": "^1.1.28"
+    "@types/mocha": "^7.0.2",
+    "@types/node": "^13.7.7",
+    "eslint": "^6.8.0",
+    "typescript": "^3.8.3",
+    "vscode": "^1.1.36"
   },
   "dependencies": {
-    "change-case": "^3.1.0",
-    "fs": "0.0.1-security",
-    "fs-extra": "^7.0.1"
+    "change-case": "^4.1.1",
+    "fs": "0.0.2",
+    "fs-extra": "^8.1.0"
   },
   "repository": "https://github.com/Galahatt/create-react-component"
 }
