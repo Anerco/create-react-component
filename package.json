@@ -1,10 +1,10 @@
 {
-  "name": "create-react-component",
-  "displayName": "create-react-component",
+  "name": "create-react-component-with-css",
+  "displayName": "create-react-component-with-css",
   "description": "Util made to quickly create folder with React component, its styles file and test file",
-  "author": "Oleh Volynets",
-  "publisher": "olehvolynets",
-  "version": "0.1.0",
+  "author": "anerco",
+  "publisher": "anerco",
+  "version": "0.1.1",
   "engines": {
     "vscode": "^1.30.0"
   },
