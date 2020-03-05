@@ -1,7 +1,7 @@
 {
-  "name": "create-react-component-with-css",
-  "displayName": "create-react-component-with-css",
-  "description": "Util made to quickly create folder with React component, its styles file and test file",
+  "name": "react-file-creator",
+  "displayName": "react-file-creator",
+  "description": "Create react files",
   "author": "anerco",
   "publisher": "anerco",
   "version": "0.1.1",
@@ -20,7 +20,7 @@
     "commands": [
       {
         "command": "extension.createReactFunctionalComponent",
-        "title": "Create Functional Component"
+        "title": "Create React Component"
       }
     ],
     "menus": {
@@ -48,5 +48,5 @@
     "fs": "0.0.2",
     "fs-extra": "^8.1.0"
   },
-  "repository": "https://github.com/Galahatt/create-react-component"
+  "repository": "https://github.com/Anerco/create-react-component"
 }
