@@ -3,7 +3,7 @@ import "./{ComponentName}.css"
 
 const {ComponentName} = props => (
   <div className="{lowercaseComponentName}-wrapper">
-    Content
+    {ComponentName} Content
   </div>
 );
 
