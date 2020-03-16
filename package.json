@@ -20,13 +20,21 @@
     "commands": [
       {
         "command": "extension.createReactFunctionalComponent",
-        "title": "Create React Component"
+        "title": "Create JSX React Component"
+      },
+      {
+        "command": "extension.createReactFunctionalComponentTs",
+        "title": "Create TSX React Component"
       }
     ],
     "menus": {
       "explorer/context": [
         {
           "command": "extension.createReactFunctionalComponent",
+          "group": "navigation"
+        },
+        {
+          "command": "extension.createReactFunctionalComponentTs",
           "group": "navigation"
         }
       ]

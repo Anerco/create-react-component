@@ -23,10 +23,11 @@ function activate(context) {
 
         let componentName = paramCase(val);
         let componentDir = generators.createComponentDir(uri, componentName);
+        const isTs = type.includes("typescript");
 
         return Promise.all([
-          generators.createComponent(componentDir, componentName, type),
-          generators.createIndex(componentDir, componentName),
+          generators.createComponent(componentDir, componentName, type, isTs),
+          generators.createIndex(componentDir, componentName, isTs),
           generators.createCSS(componentDir, componentName)
         ]);
       })
@@ -41,6 +42,10 @@ function activate(context) {
       type: "functional",
       commandID: "extension.createReactFunctionalComponent"
     },
+    {
+      type: "functional.typescript",
+      commandID: "extension.createReactFunctionalComponentTs"
+    }
   ];
 
   componentsList.forEach(comp => {

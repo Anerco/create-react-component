@@ -1,7 +1,9 @@
 import React from "react";
 import "./{ComponentName}.css";
 
-const {ComponentName} = props => {
+interface I{ComponentName} {}
+
+const {ComponentName} = ({ children }: React.PropsWithChildren<I{ComponentName}>) => {
   return (
     <div className="{lowercaseComponentName}-wrapper">
       {ComponentName} Content

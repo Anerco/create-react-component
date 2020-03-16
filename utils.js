@@ -49,7 +49,7 @@ module.exports = {
       return componentDir;
     },
 
-    createComponent: function(componentDir, componentName, type) {
+    createComponent: function(componentDir, componentName, type, isTs) {
       let templateFileName = this.templatesDir + `/${type}.template`;
 
       const compNamePascalCase = pascalCase(componentName);
@@ -61,12 +61,14 @@ module.exports = {
         .replace(/{ComponentName}/g, compNamePascalCase)
         .replace(/{lowercaseComponentName}/g, lowercaseComponent);
 
-      let filename = `${componentDir}/${compNamePascalCase}.jsx`;
+      let filename = `${componentDir}/${compNamePascalCase}.${
+        isTs ? "tsx" : "jsx"
+      }`;
 
       return this.createFile(filename, componentContent);
     },
 
-    createIndex: function(componentDir, componentName) {
+    createIndex: function(componentDir, componentName, isTs) {
       let templateFileName = this.templatesDir + "/index.template";
 
       const compName = pascalCase(componentName);
@@ -75,7 +77,7 @@ module.exports = {
         .toString()
         .replace(/{componentName}/g, compName);
 
-      let filename = `${componentDir}/index.js`;
+      let filename = `${componentDir}/index.${isTs ? "ts" : "js"}`;
 
       return this.createFile(filename, indexContent);
     },
